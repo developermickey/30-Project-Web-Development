@@ -32,6 +32,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "HelveticaMonospaced";
 }
 html, body {
     width: 100%;
@@ -49,15 +50,18 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed;
+    z-index: 2;
 }
 .welcome {
     overflow: hidden;
-    height: 15px;
+    height: 18px;
     width: 100%;
 }
 .holder {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .details {
@@ -69,6 +73,7 @@ img {
     text-transform: uppercase;
     display: block;
     height: 2.4rem; 
+    
 }
 .images {
     margin-left: auto;
@@ -95,6 +100,7 @@ img {
     opacity: 1;
     transform: translateY(40px);
     will-change: transform;
+    border-radius: 10px; 
 }
 .images img.relative {
   position: relative;
@@ -102,11 +108,102 @@ img {
 }
 
 .counter {
-    font-size: clamp(40px,8rem,8rem);
-    font-family: editorial;
+    font-size: 40px;
+    font-family: "Editorial";
     line-height: .95;
     text-align: right;
     color: #fff;
+}
+
+
+/* Header */
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    z-index: 1;
+}
+.logo {
+    font-size: 16px;
+    font-family: "HelveticaMonospaced";
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    gap: 5px;
+}
+
+.menu a {
+  position: relative;
+  color: #000;
+  text-decoration: none; /* none by default */
+  cursor: pointer;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: #000;
+  transition: width 0.4s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: end;
+  opacity: 1; /* Hide hero section initially! */
+  pointer-events: none; /* Prevent accidental hover/interaction */
+}
+
+.content-head {
+  width: 100%;
+  position: relative;
+}
+
+.text-heading {
+  text-transform: uppercase;
+  font-family: "HelveticaBold";
+  line-height: .8;
+  font-size: 19.2vw; /* Big text, scales with screen */
+  text-align: center;
+}
+
+.overflow-hidden {
+  overflow: hidden; /* Needed for masking text animation */
+}
+
+.hero-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform, filter;
+  width: 387px;
+  height: 527px;
+  object-fit: cover;
+  opacity: 1;  
+  border-radius: 10px;            /* Hide hero image initially too! */
 }
 
 
