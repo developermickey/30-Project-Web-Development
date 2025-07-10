@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
+    <div class="preloader">
+        <div class="welcome">
+            <div class="holder">
+                <span class="details">alena figurová</span>
+                <span class="details">unfold emotion</span>
+                <span class="details">welcome</span>
+            </div>
+        </div>
+        <div class="images">
+            <img src="./assets/img/preloader1-scaled.jpg" alt="preloader1">
+            <img src="./assets/img/preloader2-scaled.jpg" alt="preloader2">
+            <img class="relative" src="./assets/img/preloader3-scaled.jpg" alt="preloader3">
+            <img src="./assets/img/preloader4-scaled.jpg" alt="preloader4">
+            <img src="./assets/img/preloader5-scaled.jpg" alt="preloader5">
+        </div>
+
+        <div id="counter" class="counter">100%</div>
+    </div>
     <header></header>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
